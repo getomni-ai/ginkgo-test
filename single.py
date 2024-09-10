@@ -1,11 +1,14 @@
 import os
 import requests
+from dotenv import load_dotenv
 from protein_utils import generate_random_protein_sequences
 
+load_dotenv()
 
 # API Config
 url = 'https://api.ginkgobioworks.ai/v1/transforms/run'
 api_key = os.getenv('GINKGO_API_KEY')
+print(api_key)
 transform = [{'type': 'FILL_MASK'}]
 model = 'ginkgo-aa0-650M'
 

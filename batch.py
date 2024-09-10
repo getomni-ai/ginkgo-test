@@ -1,6 +1,9 @@
 import os
 import requests
+from dotenv import load_dotenv
 from protein_utils import generate_random_protein_sequences
+
+load_dotenv()
 
 # Define your API endpoint and API key
 url = 'https://api.ginkgobioworks.ai/v1/batches/transforms/run'
